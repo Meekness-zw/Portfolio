@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./fonts/webfontkit-20241017-075641/stylesheet.css"; // Other font import if needed
 import "./globals.css"; // Global styles
 import Header from "@/components/header";
 import PageTransition from "@/components/PageTransition";
@@ -19,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body className="font-secondary" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
         <Header />

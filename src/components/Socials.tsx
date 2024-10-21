@@ -1,6 +1,5 @@
 'use client'
 import Link from "next/link"
-import path from "path"
 import { FaGithub, FaLinkedin, FaWhatsapp, FaTwitter } from "react-icons/fa"
 
 const socials = [
