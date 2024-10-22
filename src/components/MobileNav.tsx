@@ -40,7 +40,7 @@ const MobileNav = () => {
                         <h1 className='text-4xl font-semibold'>Meek <span className='text-accent'>.</span></h1>
                     </Link>
                 </div>
-                <nav className='flex flex-col justify-center items-center gap-8'>
+                <nav className='flex flex-col justify-center items-center gap-8 font-primary'>
                     {links.map((link, index) => {
                         return (
                             <Link href={link.path} key={index} className={`${link.path === pathname && 'text-accent border-b-2 border-accent'}text-xl capitalize hover:text-accent transition-all`}>

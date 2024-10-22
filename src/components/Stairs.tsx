@@ -1,14 +1,14 @@
-'use client'
+'use client';
 import { motion } from "framer-motion";
 
 const Stairs = () => {
     const stairAnimation = {
         initial: { top: "0%" },
         animate: { top: "100%" },
-        exit: { top: ["100%", "0%"] },
+        exit: { top: "0%" }, // Simplified exit animation
     };
 
-    const reverseIndex = (index) => {
+    const reverseIndex = (index: number) => {
         const totalSteps = 6;
         return totalSteps - index - 1;
     };

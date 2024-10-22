@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import "./globals.css"; // Global styles
+import "./globals.css";
+import { JetBrains_Mono } from "next/font/google"
 import Header from "@/components/header";
 import PageTransition from "@/components/PageTransition";
 import StairTransitions from "@/components/StairTransitions";
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: '--font-jetbrainsMono'
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,11 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
-        <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      </head>
-      <body className="font-secondary" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+      <body className={jetbrainsMono.variable}>
         <Header />
         <StairTransitions />
         <PageTransition>

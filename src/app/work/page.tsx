@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,6 +8,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
+import { Swiper as SwiperType } from 'swiper'; // Import Swiper type
 
 const projects = [
   {
@@ -15,7 +16,7 @@ const projects = [
     category: 'frontend',
     title: 'Nyamatusi',
     description: 'Nyamatusi a frontend project crafted with Css 3, Html 5 and JavaScript',
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" },],
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
     image: '/assets/work/thumb1.png',
     live: 'https://meekness-zw.github.io/Nyamatusi/',
     github: 'https://github.com/Meekness-zw/Nyamatusi'
@@ -24,8 +25,8 @@ const projects = [
     num: '02',
     category: 'fullstack',
     title: 'Van Life',
-    description: 'Van Life a full stack project crafted with Reat.js, Tailwind.css and Node.js. Also includes an AI feature',
-    stack: [{ name: "React.js" }, { name: "Tailwind.css" }, { name: "Node.js" },],
+    description: 'Van Life a full stack project crafted with React.js, Tailwind.css and Node.js. Also includes an AI feature',
+    stack: [{ name: "React.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
     image: '/assets/work/thumb2.png',
     live: 'https://van-life-complete.vercel.app/',
     github: 'https://github.com/NigelSimon20/VanLife-Team-Dz-Complete'
@@ -35,7 +36,7 @@ const projects = [
     category: 'frontend',
     title: 'Manage Landing Page',
     description: 'The landing page for Manage assembled with Html 5 and Tailwind.css',
-    stack: [{ name: "Html 5" }, { name: "Tailwindcss" },],
+    stack: [{ name: "Html 5" }, { name: "Tailwindcss" }],
     image: '/assets/work/thumb3.png',
     live: 'https://meekness-zw.github.io/Tailwind/',
     github: 'https://github.com/Meekness-zw/Tailwind'
@@ -45,7 +46,7 @@ const projects = [
     category: 'Design',
     title: 'Mobi and Daas Africa Design',
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam porro saepe inventore!',
-    stack: [{ name: "Figma" },],
+    stack: [{ name: "Figma" }],
     image: '/assets/work/thumb4.png',
     live: '',
     github: ''
@@ -53,28 +54,34 @@ const projects = [
 ];
 
 const Work = () => {
-
-
   const [project, setProject] = useState(projects[0]);
-  const handleSlideChange = (swiper) => {
+
+  const handleSlideChange = (swiper: SwiperType) => {
     const currentIndex = swiper.activeIndex;
     setProject(projects[currentIndex]);
-  }
+  };
+
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }} className="min-h-[88vh] flex flex-col justify-center py-12 xl:px-0">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }}
+      className="min-h-[88vh] flex flex-col justify-center py-12 xl:px-0"
+    >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} project</h2>
+              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                {project.category} project
+              </h2>
               <p className="text-white/60">{project.description}</p>
               <ul className="flex gap-4">
-                {project.stack.map((Item, index) => {
-                  return <li key={index} className="text-xl text-accent">
+                {project.stack.map((Item, index) => (
+                  <li key={index} className="text-xl text-accent">
                     {Item.name} {index !== project.stack.length - 1 && ","}
                   </li>
-                })}
+                ))}
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
@@ -107,23 +114,27 @@ const Work = () => {
           </div>
           <div className="w-full xl:w-[50%]">
             <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12" onSlideChange={handleSlideChange}>
-              {projects.map((project, index) => {
-                return <SwiperSlide key={index} className="w-full">
+              {projects.map((project, index) => (
+                <SwiperSlide key={index} className="w-full">
                   <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                     <div className="absolute top-0 w-full h-full bg-black/10 z-10"></div>
-                    <div className="realative w-full h-full">
-                      <Image src={project.image} fill className="object-cover" alt=""></Image>
+                    <div className="relative w-full h-full"> {/* Fixed typo here */}
+                      <Image src={project.image} fill className="object-cover" alt="" />
                     </div>
                   </div>
                 </SwiperSlide>
-              })}
-              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center transition-all items-center" />
+              ))}
+              <WorkSliderBtns
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center transition-all items-center"
+                iconsStyles={undefined}
+              />
             </Swiper>
           </div>
         </div>
       </div>
     </motion.div>
-  )
+  );
 }
 
-export default Work
+export default Work;

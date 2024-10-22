@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+ import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["class"],
@@ -19,8 +19,7 @@ const config: Config = {
       xl: "1200px",
     },
     fontFamily: {
-      primary: ['var(--font-jetbrainsMono)', 'monospace'], 
-      secondary: ['font-jetbrains_monobold'], 
+      primary: 'var(--font-jetbrainsMono)',
     },
     extend: {
       colors: {
