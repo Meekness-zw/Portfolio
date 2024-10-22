@@ -2,6 +2,7 @@ import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
+import { Link } from "lucide-react";
 import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
@@ -20,7 +21,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase flex items-center gap-2 font-primary">
-                <span>Download CV</span>
+                <Link href="https://drive.google.com/file/d/10xus6VTV48z8GyHDF6qS6YRzPoFw16v5/view?usp=drive_link">Download CV</Link>
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">
