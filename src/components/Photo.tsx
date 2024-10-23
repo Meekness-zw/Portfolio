@@ -7,7 +7,7 @@ const Photo = () => {
     return (
         <div className="w-full h-full relative flex items-center justify-center">
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2, duration: 0.4, ease: "easeIn" } }}>
-                <motion.svg className="w-[280px] xl:w-[506px] h-[280px] xl:h-[506px]" fill="transparent" viewBox="0 0 506 506" xmlns="http://www.w3.org/2000/svg">
+                <motion.svg className="w-[265px] xl:w-[506px] h-[265px] xl:h-[506px]" fill="transparent" viewBox="0 0 506 506" xmlns="http://www.w3.org/2000/svg">
                     <motion.circle cx="253" cy="253" r="250" stroke="#00ff99" strokeWidth="4"
                         strokeLinecap="round"
                         strokeLinejoin="round"
