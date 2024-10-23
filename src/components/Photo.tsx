@@ -5,13 +5,10 @@ import Image from "next/image";
 
 const Photo = () => {
     return (
-        <div className="w-full h-full relative">
+        <div className="w-full h-full relative flex items-center justify-center">
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2, duration: 0.4, ease: "easeIn" } }}>
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" } }} className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute">
-                    <Image src="/assets/photto.png" priority quality={100} fill alt="" className="object-contain " />
-                </motion.div>
-                <motion.svg className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]" fill="transparent" viewBox="0 0 506 506" xmlns="http://www.w3.org/2000/svg">
-                    <motion.circle cx="240" cy="240" r="250" stroke="#00ff99" strokeWidth="4"
+                <motion.svg className="w-[280px] xl:w-[506px] h-[280px] xl:h-[506px]" fill="transparent" viewBox="0 0 506 506" xmlns="http://www.w3.org/2000/svg">
+                    <motion.circle cx="253" cy="253" r="250" stroke="#00ff99" strokeWidth="4"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         initial={{ strokeDasharray: "24 10 0 0" }}
@@ -19,9 +16,12 @@ const Photo = () => {
                         transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
                     />
                 </motion.svg>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" } }} className="absolute top-1/2 left-1/2 w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] transform -translate-x-1/2 -translate-y-1/2 mix-blend-lighten flex items-center justify-center">
+                    <Image src="/assets/photto.png" priority quality={100} fill alt="" className="object-contain" />
+                </motion.div>
             </motion.div>
         </div>
     )
 }
 
-export default Photo
+export default Photo;
