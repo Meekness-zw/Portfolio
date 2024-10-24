@@ -48,7 +48,7 @@ const projects = [
     description: 'Front-end project crafted with Next.js and Tailwind.css',
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
     image: '/assets/work/thumb5.png',
-    live: 'wood-products-henna.vercel.app',
+    live: 'https://wood-products-henna.vercel.app/',
     github: 'https://github.com/Meekness-zw/Wood-Products'
   },
 ];
