@@ -43,13 +43,13 @@ const projects = [
   },
   {
     num: '04',
-    category: 'Design',
-    title: 'Mobi and Daas Africa Design',
-    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam porro saepe inventore!',
-    stack: [{ name: "Figma" }],
-    image: '/assets/work/thumb4.png',
-    live: '',
-    github: ''
+    category: 'frontend',
+    title: 'Wood-Products',
+    description: 'Front-end project crafted with Next.js and Tailwind.css',
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
+    image: '/assets/work/thumb5.png',
+    live: 'wood-products-henna.vercel.app',
+    github: 'https://github.com/Meekness-zw/Wood-Products'
   },
 ];
 
