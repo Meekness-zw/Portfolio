@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
+import { BsArrowUpRight, BsGithub, BsFigma } from 'react-icons/bs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import Link from "next/link";
 import Image from "next/image";
@@ -50,6 +50,26 @@ const projects = [
     image: '/assets/work/thumb5.png',
     live: 'https://wood-products-henna.vercel.app/',
     github: 'https://github.com/Meekness-zw/Wood-Products'
+  },
+  {
+    num: '05',
+    category: 'frontend',
+    title: 'Wizzy Travel Agency',
+    description: 'Front-end project crafted with Next.js, Tailwind.css and TypeScript',
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "TypeScript" }],
+    image: '/assets/work/thumb6.png',
+    live: 'https://wizzy-six.vercel.app/',
+    github: 'https://github.com/Meekness-zw/Wizzy'
+  },
+  {
+    num: '06',
+    category: 'Design',
+    title: 'Figma Designs',
+    description: 'Crafted Web Designs',
+    stack: [{ name: "Figma" }],
+    image: '/assets/work/thumb4.png',
+    live: 'https://www.figma.com/design/z7YFxg6pc9L459kPzFMafY/Untitled?node-id=51-2&t=A4MUuW8TczZnsj7u-1',
+    github: 'https://www.figma.com/design/z7YFxg6pc9L459kPzFMafY/Untitled?node-id=51-2&t=A4MUuW8TczZnsj7u-1'
   },
 ];
 
