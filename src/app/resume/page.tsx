@@ -1,6 +1,6 @@
 'use client'
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from "react-icons/fa"
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiReactbootstrap, SiBootstrap } from "react-icons/si"
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPython, FaJava, FaWordpress } from "react-icons/fa"
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiReactbootstrap, SiBootstrap, SiReact } from "react-icons/si"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -8,11 +8,11 @@ import { motion } from "framer-motion"
 
 const about = {
   title: "About me",
-  description: "Front-end developer with a background in UX/UI design and digital marketing, exceling in creating efficient, appealing websites and applications, combining front-end and back-end expertise.",
+  description: "Software Developer with a background in UX/UI design and digital marketing, exceling in creating efficient, appealing websites and applications, combining front-end and back-end expertise.",
   info: [
     { fieldName: "Name", fieldValue: "Meekness Kaboti" },
     { fieldName: "Phone", fieldValue: "(+263) 78 520 9322" },
-    { fieldName: "Experience", fieldValue: "1 year" },
+    { fieldName: "Experience", fieldValue: "2 years" },
     { fieldName: "LinkedIn", fieldValue: "Meekness Kaboti" },
     { fieldName: "Nationality", fieldValue: "Zimbabwean" },
     { fieldName: "Email", fieldValue: "meeknesskaboti@gmail.com" },
@@ -26,7 +26,9 @@ const experience = {
   title: "My experience",
   description: "Driving business growth through web development and elavating brands through impactful web presence",
   items: [
-    { company: "Uncommon.org", position: "Entry Level Front-End Developer", duration: "2024 - Present" },
+    { company: "Upick", position: "Lead Software Developer", duration: "April 2025 - Present" },
+    { company: "Odessy Technologies", position: "Junior Software Developer", duration: "February 2025 - March 2025" },
+    { company: "Uncommon.org", position: "Entry Level Software Developer", duration: "2024 - 2025" },
     { company: "Uncommon.org", position: "Scratch Instructor", duration: "2024 - Present" },
     { company: "Idiation Axis", position: "Mobile App Developer Intern", duration: "September 2024" }
   ],
@@ -58,6 +60,10 @@ const skills = {
     { icon: <FaFigma />, name: "figma" },
     { icon: <SiReactbootstrap />, name: "react bootstrap" },
     { icon: <SiBootstrap />, name: "bootstrap" },
+    { icon: <FaPython />, name: "python" },
+    { icon: <SiReact />, name: "react native" },
+    { icon: <FaWordpress />, name: "wordpress" },
+    { icon: <FaJava />, name: "java" },
   ]
 }
 

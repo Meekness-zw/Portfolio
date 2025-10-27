@@ -20,13 +20,13 @@ const services = [
   {
     num: '03',
     title: 'Mobile App Development',
-    description: "Coming Soon!",
+    description: "I build high-quality, cross‑platform mobile applications using React Native and Expo. I focus on performance, intuitive UX, offline-first capabilities, API integrations, push notifications, and App Store/Play Store delivery with CI/CD.",
     href: ""
   },
   {
     num: '04',
     title: 'SEO',
-    description: "Coming Soon!",
+    description: "I improve search visibility with on‑page and technical SEO: semantic HTML, metadata, structured data (Schema.org), Core Web Vitals, site speed, sitemaps/robots, clean URLs, and analytics-driven keyword/content strategy.",
     href: ""
   }
 ];
