@@ -73,8 +73,8 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form onSubmit={sendEmail} ref={form} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
-              <p className="text-white/60">Get in touch and let us handle your next project the right way.</p>
+              <h3 className="text-4xl text-accent">Let&apos;s build something great</h3>
+              <p className="text-white/60">Whether you need a full-stack product, a mobile app, or an AI-powered feature shipped to production, I&apos;d love to hear about your project.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="text" name="firstname" placeholder="Firstname" required />
                 <Input type="text" name="lastname" placeholder="Lastname" required />
@@ -88,8 +88,11 @@ const Contact = () => {
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="Web Development">Web Development</SelectItem>
+                    <SelectItem value="Web Development">Full-Stack Web Development</SelectItem>
+                    <SelectItem value="AI/ML">AI &amp; Machine Learning</SelectItem>
+                    <SelectItem value="Mobile App Development">Mobile App Development</SelectItem>
                     <SelectItem value="UX/UI Design">UX/UI Design</SelectItem>
+                    <SelectItem value="SEO">Technical SEO &amp; Performance</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>

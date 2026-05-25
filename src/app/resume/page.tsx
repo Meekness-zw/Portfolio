@@ -1,6 +1,6 @@
 'use client'
 import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, FaPython, FaJava, FaWordpress } from "react-icons/fa"
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiReactbootstrap, SiBootstrap, SiReact } from "react-icons/si"
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiReactbootstrap, SiBootstrap, SiReact, SiTensorflow, SiPytorch, SiOpenai, SiScikitlearn, SiPandas } from "react-icons/si"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -8,11 +8,11 @@ import { motion } from "framer-motion"
 
 const about = {
   title: "About me",
-  description: "Software Developer with a background in UX/UI design and digital marketing, exceling in creating efficient, appealing websites and applications, combining front-end and back-end expertise.",
+  description: "Full-Stack AI Engineer specialising in shipping AI-powered web and mobile applications end-to-end. I work across front-end, back-end, APIs, and data pipelines — and integrate AI/ML models and AI agents into production systems. I focus on clean system architecture, scalable design, and translating business needs into working technology, from prototype through to deployment.",
   info: [
     { fieldName: "Name", fieldValue: "Meekness Kaboti" },
     { fieldName: "Phone", fieldValue: "(+263) 78 520 9322" },
-    { fieldName: "Experience", fieldValue: "2 years" },
+    { fieldName: "Experience", fieldValue: "3 years" },
     { fieldName: "LinkedIn", fieldValue: "Meekness Kaboti" },
     { fieldName: "Nationality", fieldValue: "Zimbabwean" },
     { fieldName: "Email", fieldValue: "meeknesskaboti@gmail.com" },
@@ -24,46 +24,53 @@ const about = {
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: "My experience",
-  description: "Driving business growth through web development and elavating brands through impactful web presence",
+  description: "Three years of building production software across full-stack web, mobile, and AI/ML — driving measurable business impact through reliable engineering and thoughtful product delivery.",
   items: [
-    { company: "Upick", position: "Lead Software Developer", duration: "April 2025 - Present" },
-    { company: "Odessy Technologies", position: "Junior Software Developer", duration: "February 2025 - March 2025" },
-    { company: "Uncommon.org", position: "Entry Level Software Developer", duration: "2024 - 2025" },
-    { company: "Uncommon.org", position: "Scratch Instructor", duration: "2024 - Present" },
-    { company: "Idiation Axis", position: "Mobile App Developer Intern", duration: "September 2024" }
+    { company: "Upick", position: "Lead Software Engineer — Full-Stack & AI Integrations", duration: "April 2025 - Present" },
+    { company: "Odyssey Technologies", position: "Software Engineer", duration: "February 2025 - March 2025" },
+    { company: "Uncommon.org", position: "Software Engineer", duration: "2024 - 2025" },
+    { company: "Independent / Freelance", position: "AI & Machine Learning Developer", duration: "2023 - Present" },
+    { company: "Uncommon.org", position: "Programming Instructor (Scratch & Foundations)", duration: "2024 - Present" },
+    { company: "Idiation Axis", position: "Mobile Application Developer (Intern)", duration: "September 2024" }
   ],
 };
 
 const education = {
   icon: '/assets/resume/cap.svg',
   title: "My education",
-  description: "Foundations of innovation.",
+  description: "Continuous learning across software engineering, artificial intelligence, and emerging technologies.",
   items: [
-    { institution: "Online Course Platform", degree: "Complete Course For CSS, JavaScript and HTML Certification", duration: "2024" },
-    { institution: "Online Course", degree: "Programming, AI, Robotics and Cyber Security Course", duration: "2023" },
-    { institution: "Uncommon.org", degree: "Full Stack Development Bootcamp", duration: "2024" },
+    { institution: "Uncommon.org", degree: "Full-Stack Software Development Bootcamp", duration: "2024" },
+    { institution: "Certified Online Programme", degree: "HTML, CSS & JavaScript Professional Certification", duration: "2024" },
+    { institution: "Certified Online Programme", degree: "Artificial Intelligence, Machine Learning & Robotics", duration: "2023" },
+    { institution: "Self-Directed Study", degree: "Applied Machine Learning, Deep Learning & LLM Engineering", duration: "2023 - Present" },
   ],
 }
 
 const skills = {
   title: "My Skills",
-  description: "Technical expertise at you service.",
+  description: "A modern toolkit spanning full-stack engineering, mobile, and applied AI/ML.",
   skillList: [
     { icon: <FaHtml5 />, name: "html 5" },
     { icon: <FaCss3 />, name: "css 3" },
     { icon: <FaJs />, name: "javascript" },
+    { icon: <SiTypescript />, name: "typescript" },
     { icon: <FaReact />, name: "react.js" },
     { icon: <SiNextdotjs />, name: "next.js" },
-    { icon: <SiTailwindcss />, name: "tailwind.css" },
+    { icon: <SiTailwindcss />, name: "tailwind css" },
     { icon: <FaNodeJs />, name: "node.js" },
-    { icon: <SiTypescript />, name: "typescript.js" },
+    { icon: <FaPython />, name: "python" },
+    { icon: <SiReact />, name: "react native" },
+    { icon: <SiTensorflow />, name: "tensorflow" },
+    { icon: <SiPytorch />, name: "pytorch" },
+    { icon: <SiScikitlearn />, name: "scikit-learn" },
+    { icon: <SiPandas />, name: "pandas & numpy" },
+    { icon: <SiOpenai />, name: "llms & openai api" },
+    { icon: <FaJava />, name: "java" },
     { icon: <FaFigma />, name: "figma" },
     { icon: <SiReactbootstrap />, name: "react bootstrap" },
     { icon: <SiBootstrap />, name: "bootstrap" },
-    { icon: <FaPython />, name: "python" },
-    { icon: <SiReact />, name: "react native" },
     { icon: <FaWordpress />, name: "wordpress" },
-    { icon: <FaJava />, name: "java" },
   ]
 }
 

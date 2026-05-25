@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meekness Kaboti — Resume</title>
+  <meta name="description" content="Meekness Kaboti — Full-Stack AI Engineer. Resume." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #00b870;          /* print-friendly variant of portfolio #00ff99 */
+      --accent-bright: #00ff99;
+      --ink: #15161b;
+      --ink-soft: #3b3d44;
+      --ink-mute: #6b6e76;
+      --rule: #e4e6ea;
+      --bg: #ffffff;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #f5f6f8;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 11pt;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .toolbar {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      gap: 8px;
+      z-index: 999;
+    }
+    .toolbar button {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: var(--accent-bright);
+      border: 1px solid var(--ink);
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform .15s ease, opacity .15s ease;
+    }
+    .toolbar button:hover { transform: translateY(-1px); }
+    .toolbar button.ghost {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 24px auto;
+      background: var(--bg);
+      padding: 18mm 18mm 16mm;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      border-radius: 6px;
+    }
+
+    /* ---------------- Header ---------------- */
+    header { border-bottom: 1px solid var(--rule); padding-bottom: 14px; margin-bottom: 18px; }
+    .name {
+      font-family: var(--mono);
+      font-size: 28pt;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.05;
+    }
+    .name::before {
+      content: '> ';
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .role-tag {
+      font-family: var(--mono);
+      font-size: 11pt;
+      font-weight: 500;
+      color: var(--accent);
+      margin-top: 6px;
+      letter-spacing: 0.02em;
+    }
+    .contact {
+      margin-top: 12px;
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--ink-soft);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+    }
+    .contact a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px dotted var(--ink-mute); }
+    .contact a:hover { color: var(--accent); border-color: var(--accent); }
+    .contact .dot { color: var(--accent); }
+
+    /* ---------------- Sections ---------------- */
+    section { margin-bottom: 18px; }
+    section.no-break { page-break-inside: avoid; break-inside: avoid; }
+
+    h2.section-title {
+      font-family: var(--mono);
+      font-size: 11pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+      margin: 0 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2.section-title .num {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    h2.section-title .bar {
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+      margin-left: 4px;
+    }
+
+    .profile p { margin: 0; color: var(--ink-soft); }
+
+    /* ---------------- Experience ---------------- */
+    .job { padding: 6px 0 10px; page-break-inside: avoid; break-inside: avoid; }
+    .job + .job { border-top: 1px dashed var(--rule); margin-top: 6px; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 2px;
+    }
+    .job-title {
+      font-family: var(--sans);
+      font-size: 11.5pt;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .job-dates {
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--ink-mute);
+      white-space: nowrap;
+    }
+    .job-company {
+      font-family: var(--mono);
+      font-size: 9.5pt;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .job ul { margin: 4px 0 0; padding-left: 18px; }
+    .job ul li {
+      color: var(--ink-soft);
+      margin-bottom: 2px;
+    }
+    .job ul li::marker { color: var(--accent); }
+
+    /* ---------------- Skills ---------------- */
+    .skills { display: grid; grid-template-columns: 170px 1fr; gap: 8px 18px; }
+    .skills .skill-cat {
+      font-family: var(--mono);
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+      padding-top: 2px;
+    }
+    .skills .skill-list {
+      font-family: var(--sans);
+      font-size: 10.5pt;
+      color: var(--ink-soft);
+      line-height: 1.55;
+    }
+
+    /* ---------------- Two col blocks ---------------- */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+    .block-title {
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 10.5pt;
+      color: var(--ink);
+      margin: 0;
+    }
+    .block-sub {
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--accent);
+      margin: 1px 0 2px;
+    }
+    .block-dates {
+      font-family: var(--mono);
+      font-size: 8.5pt;
+      color: var(--ink-mute);
+    }
+    .block-body { font-size: 10pt; color: var(--ink-soft); margin: 2px 0 0; }
+
+    /* ---------------- Lang ---------------- */
+    .lang-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mono);
+      font-size: 10pt;
+      color: var(--ink-soft);
+      margin-bottom: 4px;
+    }
+    .dots { letter-spacing: 2px; color: var(--accent); }
+    .dots .empty { color: var(--rule); }
+
+    /* ---------------- Footer ---------------- */
+    footer {
+      margin-top: 22px;
+      padding-top: 10px;
+      border-top: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 8.5pt;
+      color: var(--ink-mute);
+      display: flex;
+      justify-content: space-between;
+    }
+    footer .accent { color: var(--accent); }
+
+    /* ---------------- Print ---------------- */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    @media print {
+      html, body { background: var(--bg); }
+      .toolbar { display: none !important; }
+      .page {
+        width: 210mm;
+        min-height: auto;
+        margin: 0;
+        padding: 14mm 14mm 12mm;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      a { color: var(--ink); text-decoration: none; border-bottom: none; }
+      .contact a { color: var(--ink-soft); border-bottom: none; }
+    }
+
+    @media (max-width: 820px) {
+      .page { width: auto; margin: 8px; padding: 18px; }
+      .two-col, .skills { grid-template-columns: 1fr; }
+      .job-head { flex-direction: column; align-items: flex-start; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <button onclick="window.print()">⌘ Print / Save as PDF</button>
+  </div>
+
+  <main class="page">
+
+    <header>
+      <h1 class="name">Meekness Tendwai Kaboti</h1>
+      <div class="role-tag">// Full-Stack AI Engineer · Software Engineer</div>
+      <div class="contact">
+        <span>Harare, Zimbabwe</span>
+        <span class="dot">·</span>
+        <a href="mailto:meeknesskaboti@gmail.com">meeknesskaboti@gmail.com</a>
+        <span class="dot">·</span>
+        <a href="tel:+263785209322">+263 78 520 9322</a>
+        <span class="dot">·</span>
+        <a href="https://github.com/Meekness-zw" target="_blank" rel="noopener">github.com/Meekness-zw</a>
+        <span class="dot">·</span>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin.com/in/meekness-kaboti</a>
+      </div>
+    </header>
+
+    <section class="profile no-break">
+      <h2 class="section-title"><span class="num">01</span> Profile <span class="bar"></span></h2>
+      <p>
+        Full-Stack AI Engineer building production web, mobile, and AI-powered applications end-to-end. Three years across React/Next.js, Node.js, and Python — with hands-on experience integrating ML models, LLM workflows, and AI agents into real products, and owning systems from architecture and prototype through to production deployment.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title"><span class="num">02</span> Experience <span class="bar"></span></h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Lead Software Engineer — Full-Stack &amp; AI Integrations</div>
+          <div class="job-dates">Apr 2025 — Present</div>
+        </div>
+        <div class="job-company">Upick</div>
+        <ul>
+          <li>Own the architecture and delivery of the company's web platform, setting the technical roadmap and engineering standards from front-end through production.</li>
+          <li>Ship full-stack features end-to-end — React/Next.js + TypeScript interfaces, Node.js APIs, and relational data layers — released through automated CI/CD pipelines.</li>
+          <li>Integrate LLM-powered workflows and AI agents into the product, designing prompts, retrieval pipelines, and orchestration around the core user experience.</li>
+          <li>Partner directly with leadership to scope features, weigh technical trade-offs, and translate business priorities into shipped functionality.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Software Engineer</div>
+          <div class="job-dates">Feb 2025 — Mar 2025</div>
+        </div>
+        <div class="job-company">Odyssey Technologies</div>
+        <ul>
+          <li>Built and shipped features across the stack on client web applications — UI components, REST API integrations, and front-end performance improvements.</li>
+          <li>Operated within a senior team's review and release process, raising code quality and absorbing production engineering practices.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Software Engineer</div>
+          <div class="job-dates">2024 — 2025</div>
+        </div>
+        <div class="job-company">Uncommon.org</div>
+        <ul>
+          <li>Shipped and maintained features in production web applications using React, Next.js, and Node.js.</li>
+          <li>Delivered end-to-end work — UI implementation, API design, and data modelling — within a small, fast-moving team.</li>
+          <li>Contributed to code review, testing, and CI/CD workflows that kept the team's release cadence reliable.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">AI &amp; Machine Learning Developer (Independent / Freelance)</div>
+          <div class="job-dates">2023 — Present</div>
+        </div>
+        <div class="job-company">Self-directed</div>
+        <ul>
+          <li>Build applied ML solutions in Python — feature engineering, model training, and evaluation with scikit-learn, TensorFlow, and PyTorch.</li>
+          <li>Develop LLM-powered features and AI agents: retrieval-augmented generation, prompt engineering, and agent orchestration via the OpenAI API, LangChain, LangGraph, and the Vercel AI SDK.</li>
+          <li>Integrate AI capabilities into production full-stack applications, embedding model-driven workflows directly inside React/Node web apps.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Programming Instructor (Scratch &amp; Foundations)</div>
+          <div class="job-dates">2024 — Present</div>
+        </div>
+        <div class="job-company">Uncommon.org</div>
+        <ul>
+          <li>Design and deliver coding curricula across multiple skill levels, running workshops and bootcamps for cohorts of learners.</li>
+          <li>Mentor learners through programming fundamentals, debugging discipline, and project-based problem-solving.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Mobile Application Developer (Intern)</div>
+          <div class="job-dates">Sep 2024 — Dec 2024</div>
+        </div>
+        <div class="job-company">Ideation Axis</div>
+        <ul>
+          <li>Built features in cross-platform mobile applications using React Native, working alongside senior engineers.</li>
+          <li>Partnered with UX/UI designers to refine flows and contributed to code review, debugging, and performance improvements.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="no-break">
+      <h2 class="section-title"><span class="num">03</span> Technical Toolkit <span class="bar"></span></h2>
+      <div class="skills">
+        <div class="skill-cat">Web &amp; Mobile</div>
+        <div class="skill-list">React, Next.js, React Native, Tailwind CSS, Node.js, Express, REST APIs</div>
+
+        <div class="skill-cat">AI / ML</div>
+        <div class="skill-list">TensorFlow, PyTorch, scikit-learn, OpenAI API, RAG, prompt engineering, AI agent frameworks (LangChain, LangGraph, Vercel AI SDK)</div>
+
+        <div class="skill-cat">Platform &amp; Delivery</div>
+        <div class="skill-list">Cloud deployment (Vercel), CI/CD, Git, database design, data pipelines, testing &amp; code review</div>
+
+        <div class="skill-cat">Engineering</div>
+        <div class="skill-list">System architecture, scalable design, end-to-end ownership, stakeholder collaboration</div>
+      </div>
+    </section>
+
+    <section class="no-break">
+      <h2 class="section-title"><span class="num">04</span> Education <span class="bar"></span></h2>
+      <div class="two-col">
+        <div>
+          <div class="block-title">Full-Stack Software Development Bootcamp</div>
+          <div class="block-sub">Uncommon.org</div>
+          <div class="block-dates">2024</div>
+        </div>
+        <div>
+          <div class="block-title">Applied ML, Deep Learning &amp; LLM Engineering</div>
+          <div class="block-sub">Self-directed study</div>
+          <div class="block-dates">2023 — Present</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="no-break">
+      <h2 class="section-title"><span class="num">05</span> Certifications <span class="bar"></span></h2>
+      <div class="two-col">
+        <div>
+          <div class="block-title">Programming, AI, Robotics &amp; Cyber Security</div>
+          <div class="block-sub">Certified online programme</div>
+          <div class="block-dates">2023</div>
+        </div>
+        <div>
+          <div class="block-title">Complete Course for HTML, CSS &amp; JavaScript</div>
+          <div class="block-sub">Udemy</div>
+          <div class="block-dates">2024</div>
+        </div>
+        <div>
+          <div class="block-title">Fundamentals of Cyber Security</div>
+          <div class="block-sub">ICDL</div>
+          <div class="block-dates">2023</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="no-break">
+      <h2 class="section-title"><span class="num">06</span> Languages <span class="bar"></span></h2>
+      <div class="lang-row">
+        <span style="min-width:80px">English</span>
+        <span class="dots">●●●●<span class="empty">●</span></span>
+        <span style="color:var(--ink-mute)">Fluent</span>
+      </div>
+      <div class="lang-row">
+        <span style="min-width:80px">Shona</span>
+        <span class="dots">●●●●●</span>
+        <span style="color:var(--ink-mute)">Native</span>
+      </div>
+    </section>
+
+    <section class="no-break">
+      <h2 class="section-title"><span class="num">07</span> References <span class="bar"></span></h2>
+      <div class="two-col">
+        <div>
+          <div class="block-title">Nigel Simon</div>
+          <div class="block-sub">Uncommon.org</div>
+          <div class="block-body">nigel@uncommon.com · +263 71 726 2086</div>
+        </div>
+        <div>
+          <div class="block-title">Takudzwa Joseph</div>
+          <div class="block-sub">Uncommon.org</div>
+          <div class="block-body">takudzwajoseph19@gmail.com · +263 77 546 3954</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>// meekness-kaboti · resume.html</span>
+      <span class="accent">$ end-of-file</span>
+    </footer>
+
+  </main>
+
+</body>
+</html>

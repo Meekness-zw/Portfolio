@@ -7,26 +7,32 @@ import { motion } from "framer-motion";
 const services = [
   {
     num: '01',
-    title: 'Web Development',
-    description: "I create dynamic and responsive web applications using modern technologies. Proficient in HTML, CSS, and JavaScript, I leverage frameworks like React and Next.js for user-friendly interfaces. With experience in Node.js and Express for backend development, I ensure seamless user experiences across devices.  I invite you to explore my projects below!",
+    title: 'Full-Stack Web Development',
+    description: "I architect and ship modern web applications end-to-end. On the front-end I work with React, Next.js, and TypeScript to deliver fast, accessible, and maintainable interfaces. On the server side I build robust APIs, services, and data pipelines with Node.js, Express, and Python — backed by clean data models, secure authentication, cloud deployment, and production-ready CI/CD.",
     href: "https://github.com/Meekness-zw"
   },
   {
     num: '02',
-    title: 'UX/UI Design',
-    description: "I am dedicated to crafting intuitive and engaging user experiences through thoughtful design. My approach involves extensive user research and usability testing to understand user needs and pain points. I create wireframes and prototypes using tools like Figma, ensuring a user-centered design process. By focusing on visual aesthetics and interaction design, making digital experiences both enjoyable and effective.",
+    title: 'AI Engineering & AI Agents',
+    description: "I design, build, and deploy AI-powered features into production — from model integration and LLM workflows to autonomous AI agents built across modern frameworks (LangChain, LangGraph, OpenAI tools, and the Vercel AI SDK). My toolkit spans Python, TensorFlow, PyTorch, and scikit-learn for classical ML, alongside RAG, prompt engineering, and agent orchestration for LLM systems. I focus on shipping intelligence that is useful, observable, and reliable at scale.",
     href: ""
   },
   {
     num: '03',
     title: 'Mobile App Development',
-    description: "I build high-quality, cross‑platform mobile applications using React Native and Expo. I focus on performance, intuitive UX, offline-first capabilities, API integrations, push notifications, and App Store/Play Store delivery with CI/CD.",
+    description: "I build cross-platform mobile applications with React Native and Expo, focused on performance, intuitive UX, and reliability. Capabilities include offline-first architectures, REST and GraphQL integrations, push notifications, secure authentication, and full delivery to the App Store and Google Play with automated CI/CD.",
     href: ""
   },
   {
     num: '04',
-    title: 'SEO',
-    description: "I improve search visibility with on‑page and technical SEO: semantic HTML, metadata, structured data (Schema.org), Core Web Vitals, site speed, sitemaps/robots, clean URLs, and analytics-driven keyword/content strategy.",
+    title: 'UX/UI Design',
+    description: "I craft user-centred digital experiences grounded in research, accessibility, and clean visual systems. Working in Figma, I produce wireframes, prototypes, and design systems that translate seamlessly into engineered components — bridging design and code to deliver products that are both elegant and usable.",
+    href: ""
+  },
+  {
+    num: '05',
+    title: 'Technical SEO & Performance',
+    description: "I optimise sites for visibility and speed through technical SEO and Core Web Vitals: semantic HTML, structured data (Schema.org), metadata, sitemaps, clean URL architecture, image and bundle optimisation, and analytics-driven content strategy that compounds over time.",
     href: ""
   }
 ];
