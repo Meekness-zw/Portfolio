@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 
 const about = {
   title: "About me",
-  description: "Full-Stack AI Engineer specialising in shipping AI-powered web and mobile applications end-to-end. I work across front-end, back-end, APIs, and data pipelines — and integrate AI/ML models and AI agents into production systems. I focus on clean system architecture, scalable design, and translating business needs into working technology, from prototype through to deployment.",
+  description: "Full-Stack AI Engineer specialising in shipping AI-powered web and mobile applications end-to-end. I work across front-end, back-end, APIs, and data pipelines, and integrate AI/ML models and AI agents into production systems. I focus on clean system architecture, scalable design, and translating business needs into working technology, from prototype through to deployment.",
   info: [
     { fieldName: "Name", fieldValue: "Meekness Kaboti" },
     { fieldName: "Phone", fieldValue: "(+263) 78 520 9322" },
@@ -24,9 +24,9 @@ const about = {
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: "My experience",
-  description: "Three years of building production software across full-stack web, mobile, and AI/ML — driving measurable business impact through reliable engineering and thoughtful product delivery.",
+  description: "Three years of building production software across full-stack web, mobile, and AI/ML, driving measurable business impact through reliable engineering and thoughtful product delivery.",
   items: [
-    { company: "Upick", position: "Lead Software Engineer — Full-Stack & AI Integrations", duration: "April 2025 - Present" },
+    { company: "Upick", position: "Lead Software Engineer, Full-Stack & AI Integrations", duration: "April 2025 - Present" },
     { company: "Odyssey Technologies", position: "Software Engineer", duration: "February 2025 - March 2025" },
     { company: "Uncommon.org", position: "Software Engineer", duration: "2024 - 2025" },
     { company: "Independent / Freelance", position: "AI & Machine Learning Developer", duration: "2023 - Present" },
@@ -77,7 +77,7 @@ const skills = {
 const Resume = () => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }} className="min-h-[80vh] flex items-center justify-center py-12 xl:py-10 font-primary">
-      <div className="container max-auto">
+      <div className="container mx-auto">
         <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>

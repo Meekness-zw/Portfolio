@@ -8,13 +8,13 @@ const services = [
   {
     num: '01',
     title: 'Full-Stack Web Development',
-    description: "I architect and ship modern web applications end-to-end. On the front-end I work with React, Next.js, and TypeScript to deliver fast, accessible, and maintainable interfaces. On the server side I build robust APIs, services, and data pipelines with Node.js, Express, and Python — backed by clean data models, secure authentication, cloud deployment, and production-ready CI/CD.",
+    description: "I architect and ship modern web applications end-to-end. On the front-end I work with React, Next.js, and TypeScript to deliver fast, accessible, and maintainable interfaces. On the server side I build robust APIs, services, and data pipelines with Node.js, Express, and Python, backed by clean data models, secure authentication, cloud deployment, and production-ready CI/CD.",
     href: "https://github.com/Meekness-zw"
   },
   {
     num: '02',
     title: 'AI Engineering & AI Agents',
-    description: "I design, build, and deploy AI-powered features into production — from model integration and LLM workflows to autonomous AI agents built across modern frameworks (LangChain, LangGraph, OpenAI tools, and the Vercel AI SDK). My toolkit spans Python, TensorFlow, PyTorch, and scikit-learn for classical ML, alongside RAG, prompt engineering, and agent orchestration for LLM systems. I focus on shipping intelligence that is useful, observable, and reliable at scale.",
+    description: "I design, build, and deploy AI-powered features into production, from model integration and LLM workflows to autonomous AI agents built across modern frameworks (LangChain, LangGraph, OpenAI tools, and the Vercel AI SDK). My toolkit spans Python, TensorFlow, PyTorch, and scikit-learn for classical ML, alongside RAG, prompt engineering, and agent orchestration for LLM systems. I focus on shipping intelligence that is useful, observable, and reliable at scale.",
     href: ""
   },
   {
@@ -26,7 +26,7 @@ const services = [
   {
     num: '04',
     title: 'UX/UI Design',
-    description: "I craft user-centred digital experiences grounded in research, accessibility, and clean visual systems. Working in Figma, I produce wireframes, prototypes, and design systems that translate seamlessly into engineered components — bridging design and code to deliver products that are both elegant and usable.",
+    description: "I craft user-centred digital experiences grounded in research, accessibility, and clean visual systems. Working in Figma, I produce wireframes, prototypes, and design systems that translate seamlessly into engineered components, bridging design and code to deliver products that are both elegant and usable.",
     href: ""
   },
   {

@@ -14,6 +14,44 @@
     font-family: 'JetBrains Mono', monospace; 
   }
 
+  body {
+    background-image:
+      radial-gradient(ellipse 60% 40% at 50% -10%, rgba(0, 255, 153, 0.08), transparent 70%),
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 100% 900px, 48px 48px, 48px 48px;
+    background-repeat: no-repeat, repeat, repeat;
+  }
+
+  ::selection {
+    background: #00ff99;
+    color: #1c1c22;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1c1c22;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2e2e38;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00ff99;
+  }
+
+  .cursor-blink {
+    animation: cursor-blink 1s steps(1) infinite;
+  }
+  @keyframes cursor-blink {
+    50% { opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cursor-blink { animation: none; }
+  }
+
   .h1 {
     @apply text-[40px] xl:text-[80px] leading-[1.1] font-semibold;
   }
